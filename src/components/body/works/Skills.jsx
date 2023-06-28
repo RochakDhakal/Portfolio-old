@@ -18,9 +18,17 @@ function Skills() {
   }, []);
   return (
     <div data-aos="fade-up mb-5">
-      <div className="p-5 display-4 text-center text-warning" data-aos="zoom-in">Skills</div>
+      <div
+        className="p-5 display-4 text-center text-warning"
+        data-aos="zoom-in"
+      >
+        Skills
+      </div>
       <div className="d-flex justify-content-center align-items-center skills">
-        <img src="src\assets\html.png" alt="HTML 5" />
+        <img
+          src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png"
+          alt="HTML 5"
+        />
         <img src="src\assets\css.png" alt="CSS 3" />
         <img src="src\assets\javascript.png" alt="JavaScript" />
         <img src="src\assets\react.png" alt="React" />
