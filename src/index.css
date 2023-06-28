@@ -3,5 +3,8 @@
   padding: 0%;
 }
 *::selection {
-color: lime;
+  color: lime;
+}
+html {
+  background-color: rgb(33, 37, 41);
 }

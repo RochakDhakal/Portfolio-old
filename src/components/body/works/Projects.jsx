@@ -16,15 +16,18 @@ function Projects() {
     });
   }, []);
   return (
-    <>
-      <div className="display-4 text-warning text-center pt-5">Projects</div>
-      <div className="d-flex justify-content-center align-items-center py-5">
-        <div className="card p-3 m-2" style={{ width: "20rem", height: "20rem" }} data-aos="fade-right">
-          <FontAwesomeIcon icon={faCalculator} className="display-1" />
+    <div className="container vh-100">
+      <div className="row d-flex justify-content-between align-items-between">
+        <div className="text-center text-warning display-4 p-5">Projects</div>
+        <div className="card col-md m-2" data-aos="fade-right">
+          <FontAwesomeIcon
+            icon={faCalculator}
+            className="d-flex justify-content-center align-items-center p-2 display-4"
+          />
           <div className="card-body">
             <h5 className="card-title">Calculator</h5>
             <p className="card-text">
-              Made using HTML, CSS and vanilla JavaScript.
+              Made with Basic HTML, CSS and vanilla JavaScript
             </p>
             <a
               href="https://github.com/RochakDhakal/Web-Calculator"
@@ -34,39 +37,46 @@ function Projects() {
             </a>
           </div>
         </div>
-        <div className="card p-3 m-2" style={{ width: "20rem", height: "20rem" }} data-aos="zoom-in">
-          <FontAwesomeIcon icon={faShoppingCart} className="display-1" />
+        {/* Shopping Cart */}
+        <div className="card col-md m-2" data-aos="zoom-out">
+          <FontAwesomeIcon
+            icon={faShoppingCart}
+            className="d-flex justify-content-center align-items-center p-2 display-4"
+          />
           <div className="card-body">
             <h5 className="card-title">Shopping Cart</h5>
             <p className="card-text">
-              Developed using ReactJS, Redux, React Router and Bootstrap.
+              Developed a static shopping cart website using ReactJS, Redux,
+              React Router and Bootstrap
             </p>
             <a
               href="https://github.com/RochakDhakal/ShoppingCart"
-              className="btn btn-primary "
+              className="btn btn-primary"
             >
               View Code
             </a>
           </div>
         </div>
-        <div className="card p-3 m-2" style={{ width: "20rem", height: "20rem" }} data-aos="fade-left">
-          <FontAwesomeIcon icon={faVirusCovid} className="display-1" />
+        <div className="card col-md m-2" data-aos="fade-left">
+          <FontAwesomeIcon
+            icon={faVirusCovid}
+            className="d-flex justify-content-center align-items-center p-2 display-4"
+          />
           <div className="card-body">
             <h5 className="card-title">Covid Report</h5>
-            <p className="card-text">
-              Created using ReactJS, Axios and CSS
-              frameworks.
+            <p className="">
+              Created using React, React-Router, Axios and CSS frameworks.
             </p>
             <a
               href="https://github.com/RochakDhakal/Covid-19-Report"
-              className="btn btn-primary "
+              className="btn btn-primary"
             >
               View Code
             </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

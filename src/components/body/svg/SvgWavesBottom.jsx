@@ -2,7 +2,7 @@ import React from "react";
 import "../style.css"
 function SvgWavesBottom() {
   return (
-    <div style={{position:"relative"}} className="pt-5">
+    <div style={{position:"relative"}} className="pt-5 bg-dark">
       <div className="custom-shape-divider-bottom-1687746594">
         <svg
           data-name="Layer 1"

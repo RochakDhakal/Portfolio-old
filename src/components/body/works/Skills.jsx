@@ -10,6 +10,13 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./style.css";
+import html from "../../../assets/html.png";
+import css from "../../../assets/css.png";
+import javascript from "../../../assets/javascript.png";
+import react from "../../../assets/react.png";
+import bootstrap from "../../../assets/bootstrap.png";
+import redux from "../../../assets/Redux.png";
+import axios from "../../../assets/Axios.png";
 function Skills() {
   useEffect(() => {
     Aos.init({
@@ -17,24 +24,21 @@ function Skills() {
     });
   }, []);
   return (
-    <div data-aos="fade-up mb-5">
+    <div data-aos="fade-up" className="mb-5">
       <div
         className="p-5 display-4 text-center text-warning"
         data-aos="zoom-in"
       >
         Skills
       </div>
-      <div className="d-flex justify-content-center align-items-center skills">
-        <img
-          src="https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png"
-          alt="HTML 5"
-        />
-        <img src="src\assets\css.png" alt="CSS 3" />
-        <img src="src\assets\javascript.png" alt="JavaScript" />
-        <img src="src\assets\react.png" alt="React" />
-        <img src="src\assets\bootstrap.png" alt="Bootstrap" />
-        <img src="src\assets\Redux.png" alt="Redux" />
-        <img src="src\assets\Axios.png" alt="Axios" />
+      <div className="d-flex justify-content-center align-items-center skills text-light">
+        <img src={html} alt="HTML 5" />
+        <img src={css} alt="CSS 3" />
+        <img src={javascript} alt="JavaScript" />
+        <img src={react} alt="React" />
+        <img src={bootstrap} alt="Bootstrap" />
+        <img src={redux} alt="Redux" />
+        <img src={axios} alt="Axios" />
       </div>
     </div>
   );

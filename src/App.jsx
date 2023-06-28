@@ -16,7 +16,6 @@ function App() {
         <Route path="/" index element={<FrontPage />} />
         <Route path="/works" element={<Work />} />
         <Route path="/contact" element={<Contact/>}/>
-        {/* <Route path="/resume" element={<Resume />}/> */}
         <Route path="*" element={<>Page Not Found</>} />
       </Routes>
       <Footer/>

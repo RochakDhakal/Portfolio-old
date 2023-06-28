@@ -75,16 +75,18 @@ function ContactMe() {
         "service_fso7ipt",
         "template_eg0jqgs",
         form.current,
-        "yW9sD5wxu_LfCNDnx"
+        "yW9sD5wxu_LfCNDnx",
+        setIsDisabled(true)
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message Has Been Sent!")
+          setIsDisabled(true);
+          alert("Message Has Been Sent!");
         },
         (error) => {
           console.log(error.text);
-          alert("Mail To send Message!")
+          alert("Mail To send Message!");
         }
       );
   };
@@ -93,7 +95,7 @@ function ContactMe() {
     const { name, value } = e.target;
 
     switch (name) {
-      case "full_name":
+      case "first_name":
         setFname(value);
         break;
       case "last_name":
@@ -117,7 +119,7 @@ function ContactMe() {
     const { name, value } = e.target;
 
     switch (name) {
-      case "full_name":
+      case "first_name":
         if (value.trim() === "") {
           setFnameErr("First name is required");
         } else {
@@ -174,24 +176,25 @@ function ContactMe() {
   }, [fname, lname, mail, num, msg]);
 
   return (
-    <div className="mt-5 pt-5 d-flex justify-content-center align-items-center bg-dark text-light">
-      <form ref={form} onSubmit={sendEmail} className="w-100 m-4 vh-100">
-        <div className="display-6 py-2 d-flex justify-content-center align-items-center w-75">
-          <label className="px-5 w-50">Full Name</label>
+    <div className="bg-dark d-flex flex-column justify-content-center align-items-center text-light my-5">
+      <h1 className="text-warning display-4">Contact Me</h1>
+      <form ref={form} onSubmit={sendEmail} className="container">
+        <div className="row display-4 my-2">
+          <label className="col-md-6">First Name</label>
           <input
             type="text"
             autoComplete="off"
-            name="full_name"
+            name="first_name"
             placeholder="John Doe"
             value={fname}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="p-2 w-50"
+            className="col-md-6"
           />
         </div>
         {fnameErr && <div className="text-danger">{fnameErr}</div>}
-        <div className="display-6 py-2 d-flex justify-content-center align-items-center w-75">
-          <label className="px-5 w-50">Last Name</label>
+        <div className="row display-4 my-2">
+          <label className="col-md-6">Last Name</label>
           <input
             type="text"
             autoComplete="off"
@@ -200,12 +203,12 @@ function ContactMe() {
             value={lname}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="p-2 w-50"
+            className="col-md-6"
           />
         </div>
         {lnameErr && <div className="text-danger">{lnameErr}</div>}
-        <div className="display-6 py-2 d-flex justify-content-center align-items-center w-75">
-          <label className="px-5 w-50">Email</label>
+        <div className="row display-4 my-2">
+          <label className="col-md-6">Email</label>
           <input
             type="email"
             autoComplete="off"
@@ -214,12 +217,12 @@ function ContactMe() {
             value={mail}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="p-2 w-50"
+            className="col-md-6"
           />
         </div>
         {mailErr && <div className="text-danger">{mailErr}</div>}
-        <div className="display-6 py-2 d-flex justify-content-center align-items-center w-75">
-          <label className="px-5 w-50">Phone Number</label>
+        <div className="row display-4 my-2">
+          <label className="col-md-6">Phone Number</label>
           <input
             type="text"
             autoComplete="off"
@@ -228,28 +231,29 @@ function ContactMe() {
             value={num}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="p-2 w-50"
+            className="col-md-6"
           />
         </div>
         {numErr && <div className="text-danger">{numErr}</div>}
-        <div className="d-flex justify-content-center align-items-center display-6 w-100">
-          <label className="px-5 w-25">Message</label>
+        <div className="row display-4 mb-2">
+          <label className="col-md-12 text-center p-2">Message</label>
           <textarea
             name="message"
             value={msg}
-            style={{ width: "100%", outline: "none" }}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="border-bottom p-1 w-75"
+            className="col-md-12"
             placeholder="Enter Your Message"
+            style={{zIndex:"1"}}
           />
         </div>
         {msgErr && <div className="text-danger">{msgErr}</div>}
-        <div className="d-flex justify-content-evenly align-items-center p-2">
+        <div className="d-flex justify-content-center align-item-center pb-5 mx-5">
           <input
             type="submit"
             value="Send"
-            className="display-5 p-2"
+            style={{ fontWeight: "bold" }}
+            className="display-6 text-muted p-2"
             disabled={isDisabled}
           />
         </div>
