@@ -20,7 +20,7 @@ function Header() {
     >
       <Container>
         <Navbar.Brand href="#home">
-          <Link to="/" className="text-decoration-none text-light p-2">
+          <Link to="/Portfolio" className="text-decoration-none text-light p-2">
             Rochak
           </Link>
         </Navbar.Brand>
