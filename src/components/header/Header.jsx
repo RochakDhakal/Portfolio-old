@@ -19,8 +19,8 @@ function Header() {
       data-duration="1500"
     >
       <Container>
-        <Navbar.Brand href="#home">
-          <Link to="/Portfolio" className="text-decoration-none text-light p-2">
+        <Navbar.Brand >
+          <Link to="/" className="text-decoration-none text-light p-2">
             Rochak
           </Link>
         </Navbar.Brand>
