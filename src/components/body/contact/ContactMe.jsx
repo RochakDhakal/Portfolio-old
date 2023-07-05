@@ -185,7 +185,7 @@ function ContactMe() {
             type="text"
             autoComplete="off"
             name="first_name"
-            placeholder="John Doe"
+            placeholder="John"
             value={fname}
             onChange={handleInputChange}
             onBlur={handleInputBlur}

@@ -8,7 +8,7 @@ function Work() {
   return (
     <div className="pt-5 bg-dark">
       <Projects />
-      <Skills/>
+      <Skills className="vh-100"/>
       <Experience className="vh-100"/>
       <SvgWavesBottom/>
     </div>
