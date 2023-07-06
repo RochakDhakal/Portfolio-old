@@ -1,39 +1,75 @@
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Aos from "aos";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import { Link } from "react-router-dom";
-import "aos/dist/aos.css";
-import html from "../../assets/html.png";
+import logo from "../../assets/Logo.png"
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleNavToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const handleNavItemClick = () => {
+    setIsNavOpen(false);
+  };
+
+  const handleDocumentClick = (event) => {
+    if (
+      isNavOpen &&
+      event.target.closest(".navbar") === null &&
+      event.target.className !== "navbar-toggler"
+    ) {
+      setIsNavOpen(false);
+    }
+  };
+
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    document.addEventListener("click", handleDocumentClick);
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
   }, []);
   return (
     <Navbar
+      collapseOnSelect
       expand="lg"
       className="bg-dark fixed-top"
-      data-aos="fade-down"
-      data-duration="1500"
+      expanded={isNavOpen}
     >
       <Container>
-        <Navbar.Brand >
-          <Link to="/" className="text-decoration-none text-light p-2">
-            Rochak
+        <Navbar.Brand>
+          <Link
+            to="/"
+            className="text-decoration-none text-light p-2"
+            onClick={handleNavToggle}
+          >
+            <img src={logo} alt="Rochak" title="Rochak Dhakal" style={{height:"3rem"}}/>
           </Link>
+          <span className="fs-6 px-2 neon-text">Available for Work</span>
         </Navbar.Brand>
         <NavbarToggle
-          aria-controls="basic-navbar-nav"
+          aria-controls="responsive-navbar-nav"
           style={{ background: "white" }}
+          onClick={handleNavToggle}
         />
-        <Navbar.Collapse id="basic-navbar-nav bg-light">
-          <Nav className="me-auto">
-            <Link to="/works" className="text-decoration-none text-light p-2">
+        <Navbar.Collapse
+          id="responsive-navbar-nav bg-light"
+          className="justify-content-end align-items-end"
+        >
+          <Nav className="ml-auto justify-content-end">
+            <Link
+              to="/works"
+              className="text-decoration-none text-light p-2"
+              onClick={handleNavToggle}
+            >
               Works
             </Link>
-            <Link to="/contact" className="text-decoration-none text-light p-2">
+            <Link
+              to="/contact"
+              className="text-decoration-none text-light p-2"
+              onClick={handleNavToggle}
+            >
               Contact
             </Link>
           </Nav>

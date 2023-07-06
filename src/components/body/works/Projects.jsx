@@ -16,7 +16,7 @@ function Projects() {
     });
   }, []);
   return (
-    <div className="container vh-100">
+    <div className="container vh-100 bg-dark">
       <div className="row d-flex justify-content-between align-items-between">
         <div className="text-center text-warning display-4 p-5">Projects</div>
         <div className="card col-md m-2" data-aos="fade-right">

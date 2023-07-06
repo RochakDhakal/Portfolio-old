@@ -9,8 +9,8 @@ function BlobAnimation() {
       "< Based In Nepal />",
     ],
     loop: {},
-    typeSpeed: 150,
-    deleteSpeed: 100,
+    typeSpeed: 100,
+    deleteSpeed: 50,
   });
   return (
     <div className="">
@@ -18,7 +18,7 @@ function BlobAnimation() {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 500 500"
-        width="40vw"
+        width="50vw"
         id="blobSvg"
         transform="rotate(0)"
         style={{ opacity: 1 }}

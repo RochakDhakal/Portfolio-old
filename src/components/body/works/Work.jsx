@@ -6,11 +6,11 @@ import Skills from "./Skills";
 
 function Work() {
   return (
-    <div className="pt-5 bg-dark">
-      <Projects />
-      <Skills className="vh-100"/>
-      <Experience className="vh-100"/>
-      <SvgWavesBottom/>
+    <div className="bg-dark">
+      <Projects/>
+      <Skills />
+      <Experience className="vh-100" />
+      <SvgWavesBottom />
     </div>
   );
 }

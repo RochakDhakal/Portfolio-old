@@ -11,7 +11,7 @@ function FrontPage() {
     <div>
       <div className="d-flex justify-content-center align-items-center front-page vh-100 overflow-hidden">
         <div className="d-flex flex-column justify-content-center align-items-center">
-          <span className="d-flex justify-content-center align-items-center display-2 neon-text pt-5 mt-3 text-center">{text}</span>
+          <span className="d-flex justify-content-center align-items-center display-2 neon-text pt-5 mt-3 text-center"></span>
           <BlobAnimation className="" />
         </div>
       </div>

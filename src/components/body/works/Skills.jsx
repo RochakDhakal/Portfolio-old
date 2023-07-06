@@ -24,7 +24,7 @@ function Skills() {
     });
   }, []);
   return (
-    <div data-aos="fade-up" className="mb-5">
+    <div data-aos="fade-up" className="mb-5 vh-100">
       <div
         className="p-5 display-4 text-center text-warning"
         data-aos="zoom-in"
@@ -32,13 +32,13 @@ function Skills() {
         Skills
       </div>
       <div className="d-flex justify-content-center align-items-center skills text-light">
-        <img src={html} alt="HTML 5" />
-        <img src={css} alt="CSS 3" />
-        <img src={javascript} alt="JavaScript" />
-        <img src={react} alt="React" />
-        <img src={bootstrap} alt="Bootstrap" />
-        <img src={redux} alt="Redux" />
-        <img src={axios} alt="Axios" />
+        <img src={html} alt="HTML 5" title="HTML 5" />
+        <img src={css} alt="CSS 3" title="CSS 3"/>
+        <img src={javascript} alt="JavaScript" title="JavaScript"/>
+        <img src={react} alt="React" title="React JS"/>
+        <img src={bootstrap} alt="Bootstrap" title="Bootstrap"/>
+        <img src={redux} alt="Redux" title="Redux"/>
+        <img src={axios} alt="Axios" title="Axios"/>
       </div>
     </div>
   );

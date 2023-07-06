@@ -21,8 +21,8 @@ function Footer() {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="">
-      <div className="footer d-flex justify-content-center align-items-center">
+      <div className="footer d-flex justify-content-center align-items-center pt-5">
+        <div><a href="mailto:rochakdhakal@gmail.com" className="text-decoration-none display-4 text-light m-2 fai" title="rochakdhakal@gmail.com"><b>@</b></a></div>
         <a href="https://www.linkedin.com/in/rochak-dhakal/">
           <FontAwesomeIcon
             icon={faLinkedinIn}
@@ -48,7 +48,6 @@ function Footer() {
           />
         </a>
       </div>
-    </div>
   );
 }
 
