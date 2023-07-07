@@ -34,14 +34,14 @@ function Header() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      className="bg-dark fixed-top"
+      className="bg-secondary fixed-top"
       expanded={isNavOpen}
     >
       <Container>
         <Navbar.Brand>
           <Link
             to="/"
-            className="text-decoration-none text-light p-2"
+            className="text-decoration-none text-light"
             onClick={handleNavToggle}
           >
             <img src={logo} alt="Rochak" title="Rochak Dhakal" style={{height:"3rem"}}/>
@@ -60,14 +60,14 @@ function Header() {
           <Nav className="ml-auto justify-content-end">
             <Link
               to="/works"
-              className="text-decoration-none text-light p-2"
+              className="text-decoration-none text-light px-2"
               onClick={handleNavToggle}
             >
               Works
             </Link>
             <Link
               to="/contact"
-              className="text-decoration-none text-light p-2"
+              className="text-decoration-none text-light px-2"
               onClick={handleNavToggle}
             >
               Contact

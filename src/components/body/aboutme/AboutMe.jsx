@@ -6,8 +6,8 @@ function AboutMe() {
   return (
     <>
       <div className="about-me">
-        <div className=" p-5">
-          <Info />
+        <div className="px-3">
+          <Info className="vh-100"/>
         </div>
       </div>
     </>
