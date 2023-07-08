@@ -10,7 +10,6 @@ function Work() {
       <Projects/>
       <Skills />
       <Experience className="vh-100" />
-      <SvgWavesBottom />
     </div>
   );
 }

@@ -8,8 +8,6 @@ function Info() {
   return (
     <div
       className="py-2 card-deck"
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
     >
       <div className="card bg-dark d-flex border-dark">
         <h5 className="card-title display-1 text-warning text-center">
@@ -20,7 +18,7 @@ function Info() {
             className="col-md-4 d-flex"
             src={avatar}
             alt="Card image cap"
-            data-aos="fade-up"
+            data-aos="zoom-in"
             data-aos-easing="ease-in-out"
             data-aos-duration="1500"
           />
@@ -28,7 +26,7 @@ function Info() {
             <section className=" d-flex flex-column">
               <p
                 className=" card-text text-secondary"
-                data-aos="zoom-in"
+                data-aos="fade-right"
                 style={{fontSize:"1.5rem"}}
                 data-aos-easing="ease-in-out"
               >

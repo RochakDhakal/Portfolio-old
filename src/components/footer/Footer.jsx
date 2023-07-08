@@ -8,38 +8,60 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 function Footer() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-      <div className="bg-secondary w-100 footer d-flex justify-content-center align-items-center">
-        <div><a href="mailto:rochakdhakal@gmail.com" className="text-decoration-none display-4 text-light m-2 fai" title="rochakdhakal@gmail.com"><b>@</b></a></div>
-        <a href="https://www.linkedin.com/in/rochak-dhakal/">
-          <FontAwesomeIcon
-            icon={faLinkedinIn}
-            className="display-4 text-light m-2 fai"
-            title="LinkedIn"
-            data-aos="fade-right"
-          />
-        </a>
-        <a href="https://www.instagram.com/rochakdhakal32/">
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="display-4 text-light m-2 fai"
-            title="Instagram"
-            data-aos="zoom-in"
-          />
-        </a>
-        <a href="https://github.com/RochakDhakal">
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="display-4 text-light m-2 fai"
-            title="GitHub"
-            data-aos="fade-left"
-          />
-        </a>
-      </div>
+    <svg
+      width="100%"
+      id="svg"
+      viewBox="0 0 1440 390"
+      xmlns="http://www.w3.org/2000/svg"
+      className="transition duration-300 ease-in-out delay-150 bg-dark"
+    >
+      <path
+        d="M 0,400 C 0,400 0,200 0,200 C 166.93333333333334,169.2 333.8666666666667,138.4 511,158 C 688.1333333333333,177.6 875.4666666666667,247.60000000000002 1032,263 C 1188.5333333333333,278.4 1314.2666666666667,239.2 1440,200 C 1440,200 1440,400 1440,400 Z"
+        stroke="none"
+        strokeWidth={0}
+        fill="#6c757d"
+        fillOpacity={1}
+        className="transition-all duration-300 ease-in-out delay-150 path-0"
+      />
+      <foreignObject x="0%" y="80%" width="100%" height="100%">
+        <div className="d-flex justify-content-center align-items-center">
+          <a href="https://github.com/RochakDhakal/">
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="display-5 p-3 text-light"
+              title="GitHub"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/rochak-dhakal/">
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="display-5 p-3 text-light"
+              title="LinkedIn"
+            />
+          </a>
+          <a href="mailto:rochakdhakal@gmail.com">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="display-5 p-3 text-light"
+              title="Gmail"
+            />
+          </a>
+          <a href="https://www.instagram.com/rochakdhakal32/">
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="display-5 p-3 text-light"
+              title="Instagram"
+            />
+          </a>
+        </div>
+      </foreignObject>
+    </svg>
   );
 }
 
