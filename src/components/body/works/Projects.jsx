@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import calculator from "../../../assets/Calculator.gif";
+import shopping from "../../../assets/Shopping.gif";
+import covid from "../../../assets/Covid.gif";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalculator, faShoppingCart, faVirusCovid } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
   useEffect(() => {
@@ -12,11 +12,11 @@ function Projects() {
     });
   }, []);
   return (
-<div className="container vh-100 bg-dark mt-5">
+    <div className="container vh-100 bg-dark mt-5">
       <div className="row d-flex justify-content-between align-items-between">
         <div className="text-center text-warning display-4 p-5">Projects</div>
         <div className="card col-md m-2" data-aos="fade-right">
-          <img src={calculator} alt="Calculator" className="p-2"/>
+          <img src={calculator} alt="Calculator" className="p-2" />
           <div className="card-body">
             <h5 className="card-title">Calculator</h5>
             <p className="card-text">
@@ -32,10 +32,7 @@ function Projects() {
         </div>
         {/* Shopping Cart */}
         <div className="card col-md m-2" data-aos="zoom-out">
-          <FontAwesomeIcon
-            icon={faShoppingCart}
-            className="d-flex justify-content-center align-items-center p-2 display-4"
-          />
+          <img src={shopping} alt="Shopping Cart" className="m-2 border"/>
           <div className="card-body">
             <h5 className="card-title">Shopping Cart</h5>
             <p className="card-text">
@@ -51,10 +48,7 @@ function Projects() {
           </div>
         </div>
         <div className="card col-md m-2" data-aos="fade-left">
-          <FontAwesomeIcon
-            icon={faVirusCovid}
-            className="d-flex justify-content-center align-items-center p-2 display-4"
-          />
+          <img src={covid} alt="Covid" className="p-2"/>
           <div className="card-body">
             <h5 className="card-title">Covid Report</h5>
             <p className="">
