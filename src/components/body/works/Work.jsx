@@ -8,8 +8,6 @@ function Work() {
   return (
     <div className="bg-dark">
       <Projects/>
-      <Skills />
-      <Experience className="vh-100" />
     </div>
   );
 }

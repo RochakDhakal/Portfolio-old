@@ -6,9 +6,7 @@ import "./style.css";
 
 function Info() {
   return (
-    <div
-      className="py-2 card-deck"
-    >
+    <div className="py-2 card-deck">
       <div className="card bg-dark d-flex border-dark">
         <h5 className="card-title display-1 text-warning text-center">
           About Me
@@ -27,7 +25,7 @@ function Info() {
               <p
                 className=" card-text text-secondary"
                 data-aos="fade-right"
-                style={{fontSize:"1.5rem"}}
+                style={{ fontSize: "1.5rem" }}
                 data-aos-easing="ease-in-out"
               >
                 Welcome to my website! I'm{" "}
@@ -40,7 +38,7 @@ function Info() {
               <p
                 className="card-text text-secondary"
                 data-aos="zoom-in"
-                style={{fontSize:"1.5rem"}}
+                style={{ fontSize: "1.5rem" }}
                 data-aos-easing="ease-in-out"
               >
                 I'm captivated by the art of transforming designs into

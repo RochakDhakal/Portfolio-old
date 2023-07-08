@@ -1,13 +1,9 @@
-import {
-  faCalculator,
-  faCartShopping,
-  faShoppingCart,
-  faVirusCovid,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect } from "react";
+import calculator from "../../../assets/Calculator.gif";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalculator, faShoppingCart, faVirusCovid } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
   useEffect(() => {
@@ -16,14 +12,11 @@ function Projects() {
     });
   }, []);
   return (
-    <div className="container vh-100 bg-dark">
+<div className="container vh-100 bg-dark mt-5">
       <div className="row d-flex justify-content-between align-items-between">
         <div className="text-center text-warning display-4 p-5">Projects</div>
         <div className="card col-md m-2" data-aos="fade-right">
-          <FontAwesomeIcon
-            icon={faCalculator}
-            className="d-flex justify-content-center align-items-center p-2 display-4"
-          />
+          <img src={calculator} alt="Calculator" className="p-2"/>
           <div className="card-body">
             <h5 className="card-title">Calculator</h5>
             <p className="card-text">
