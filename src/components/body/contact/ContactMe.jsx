@@ -178,6 +178,10 @@ function ContactMe() {
   return (
     <div className="bg-dark p-5 mt-5">
       <div className="display-4 text-center text-warning p-5">Contact Me</div>
+      <div className="fs-4 text-center text-secondary p-5">
+        Let’s get this conversation started. Tell me a bit about yourself, and
+        I’ll get in touch as soon as possible.
+      </div>
       <div className="card bg-secondary p-2">
         <div className="row g-0">
           <div className="col-md-6">
@@ -284,7 +288,7 @@ function ContactMe() {
                     type="submit"
                     value="Send"
                     style={{ fontWeight: "bold" }}
-                    className="display-6 text-muted p-2 "
+                    className="display-6 text-light p-2 bg-success"
                     disabled={isDisabled}
                   />
                 </div>
