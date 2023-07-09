@@ -29,19 +29,21 @@ function Footer() {
         fillOpacity={1}
         className="transition-all duration-300 ease-in-out delay-150 path-0"
       />
-      <foreignObject x="0%" y="80%" width="100%" height="100%">
-        <div className="d-flex justify-content-center align-items-center">
+      <foreignObject x="0%" y="75%" width="100%" height="100%">
+        <div className="d-flex justify-content-evenly align-items-center">
           <a href="https://github.com/RochakDhakal/">
             <FontAwesomeIcon
               icon={faGithub}
               className="display-5 p-3 text-light"
               title="GitHub"
+              style={{fontSize:"5rem"}}
             />
           </a>
           <a href="https://www.linkedin.com/in/rochak-dhakal/">
             <FontAwesomeIcon
               icon={faLinkedinIn}
-              className="display-5 p-3 text-light"
+              className="p-3 text-light"
+              style={{fontSize:"5rem"}}
               title="LinkedIn"
             />
           </a>
@@ -49,6 +51,7 @@ function Footer() {
             <FontAwesomeIcon
               icon={faEnvelope}
               className="display-5 p-3 text-light"
+              style={{fontSize:"5rem"}}
               title="Gmail"
             />
           </a>
@@ -56,6 +59,7 @@ function Footer() {
             <FontAwesomeIcon
               icon={faInstagram}
               className="display-5 p-3 text-light"
+              style={{fontSize:"5rem"}}
               title="Instagram"
             />
           </a>

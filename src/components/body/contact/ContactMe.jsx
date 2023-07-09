@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import SvgWavesBottom from "../svg/SvgWavesBottom";
+import contact from "../../../assets/Contact.jpg";
 
 function ContactMe() {
   const [fname, setFname] = useState("");
@@ -176,83 +176,123 @@ function ContactMe() {
   }, [fname, lname, mail, num, msg]);
 
   return (
-    <div className="bg-dark d-flex flex-column justify-content-center align-items-center text-light p-5 mt-5">
-      <h1 className="text-warning display-3 p-5">Contact Me</h1>
-      <form ref={form} onSubmit={sendEmail} className="container w-100 bg-secondary p-5 rounded-3">
-        <div className="row fs-4 my-2 justify-content-end align-items-end">
-          <input
-            type="text"
-            autoComplete="off"
-            name="first_name"
-            placeholder="First Name"
-            value={fname}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="col-md-6"
-          />
+    <div className="bg-dark p-5 mt-5">
+      <div className="display-4 text-center text-warning p-5">Contact Me</div>
+      <div className="card bg-secondary p-2">
+        <div className="row g-0">
+          <div className="col-md-6">
+            <img src={contact} className="img-fluid rounded" alt="Contact" />
+          </div>
+          <div className="col-md-6">
+            <h5 className="card-title text-center display-5 text-warning p-5">
+              Fill in Your Details
+            </h5>
+            <div className="card-body d-flex justify-content-end align-items-end flex-column w-100">
+              <form ref={form} onSubmit={sendEmail} className="w-100">
+                {/* First Name and Last Name */}
+                <div className="d-flex col-md-12 row m-0">
+                  <div className="col-md-6 p-2 fs-4">
+                    <input
+                      type="text"
+                      autoComplete="off"
+                      name="first_name"
+                      placeholder="First Name"
+                      value={fname}
+                      onChange={handleInputChange}
+                      onBlur={handleInputBlur}
+                      className="col-md-12"
+                    />
+                    {fnameErr && (
+                      <div className="text-danger d-flex justify-content-end align-items-end">
+                        {fnameErr}
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-md-6 p-2 fs-4">
+                    <input
+                      type="text"
+                      autoComplete="off"
+                      name="last_name"
+                      placeholder="Last Name"
+                      value={lname}
+                      onChange={handleInputChange}
+                      onBlur={handleInputBlur}
+                      className="col-md-12"
+                    />
+                    {lnameErr && (
+                      <div className="text-danger d-flex justify-content-end align-items-end">
+                        {lnameErr}
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {/* Email */}
+                <div className="p-2 fs-4">
+                  <input
+                    type="email"
+                    autoComplete="off"
+                    name="user_email"
+                    placeholder="Email"
+                    value={mail}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    className="col-md-12"
+                  />
+                  {mailErr && (
+                    <div className="text-danger d-flex justify-content-end align-items-end">
+                      {mailErr}
+                    </div>
+                  )}
+                </div>
+                <div className="p-2 fs-4">
+                  <input
+                    type="text"
+                    autoComplete="off"
+                    name="user_number"
+                    placeholder="Phone Number"
+                    value={num}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    className="col-md-12"
+                  />
+                  {numErr && (
+                    <div className="text-danger d-flex justify-content-end align-items-end">
+                      {numErr}
+                    </div>
+                  )}
+                </div>
+                {/* Message */}
+                <div className="p-2 fs-4">
+                  <textarea
+                    name="message"
+                    value={msg}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    className="col-md-12 p-2"
+                    placeholder="Enter Your Message"
+                    rows="4"
+                  />
+                  {msgErr && (
+                    <div className="text-danger d-flex justify-content-end align-items-end">
+                      {msgErr}
+                    </div>
+                  )}
+                </div>
+
+                <div className="p-2 fs-4 d-flex justify-content-end align-items-end">
+                  <input
+                    type="submit"
+                    value="Send"
+                    style={{ fontWeight: "bold" }}
+                    className="display-6 text-muted p-2 "
+                    disabled={isDisabled}
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        {fnameErr && <div className="text-danger d-flex justify-content-end align-items-end">{fnameErr}</div>}
-        <div className="row fs-4 my-2 justify-content-end align-items-end">
-          <input
-            type="text"
-            autoComplete="off"
-            name="last_name"
-            placeholder="Last Name"
-            value={lname}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="col-md-6"
-          />
-        </div>
-        {lnameErr && <div className="text-danger d-flex justify-content-end align-items-end">{lnameErr}</div>}
-        <div className="row fs-4 my-2 justify-content-end align-items-end">
-          <input
-            type="email"
-            autoComplete="off"
-            name="user_email"
-            placeholder="Email"
-            value={mail}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="col-md-6"
-          />
-        </div>
-        {mailErr && <div className="text-danger d-flex justify-content-end align-items-end">{mailErr}</div>}
-        <div className="row fs-4 my-2 justify-content-end align-items-end">
-          <input
-            type="text"
-            autoComplete="off"
-            name="user_number"
-            placeholder="Phone Number"
-            value={num}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="col-md-6"
-          />
-        </div>
-        {numErr && <div className="text-danger d-flex justify-content-end align-items-end">{numErr}</div>}
-        <div className="row mb-2 justify-content-end align-items-end fs-4">
-          <textarea
-            name="message"
-            value={msg}
-            onChange={handleInputChange}
-            onBlur={handleInputBlur}
-            className="col-md-6"
-            placeholder="Enter Your Message"
-            rows="4"
-          />
-        </div>
-        {msgErr && <div className="text-danger d-flex justify-content-end align-items-end">{msgErr}</div>}
-        <div className="d-flex justify-content-end align-item-end pt-5">
-          <input
-            type="submit"
-            value="Send"
-            style={{ fontWeight: "bold" }}
-            className="display-6 text-muted p-2 "
-            disabled={isDisabled}
-          />
-        </div>
-      </form>
+      </div>
     </div>
   );
 }
