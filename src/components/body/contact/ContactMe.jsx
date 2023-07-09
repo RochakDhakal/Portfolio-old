@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import SvgWavesBottom from "../svg/SvgWavesBottom";
 
@@ -163,7 +163,7 @@ function ContactMe() {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setIsDisabled(
       fname.trim() === "" ||
         lname.trim() === "" ||
@@ -176,84 +176,79 @@ function ContactMe() {
   }, [fname, lname, mail, num, msg]);
 
   return (
-    <div className="bg-dark d-flex flex-column justify-content-center align-items-center text-light my-5">
-      <h1 className="text-warning display-4">Contact Me</h1>
-      <form ref={form} onSubmit={sendEmail} className="container">
-        <div className="row display-4 my-2">
-          <label className="col-md-6">First Name</label>
+    <div className="bg-dark d-flex flex-column justify-content-center align-items-center text-light p-5 mt-5">
+      <h1 className="text-warning display-3 p-5">Contact Me</h1>
+      <form ref={form} onSubmit={sendEmail} className="container w-100 bg-secondary p-5 rounded-3">
+        <div className="row fs-4 my-2 justify-content-end align-items-end">
           <input
             type="text"
             autoComplete="off"
             name="first_name"
-            placeholder="John"
+            placeholder="First Name"
             value={fname}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
             className="col-md-6"
           />
         </div>
-        {fnameErr && <div className="text-danger">{fnameErr}</div>}
-        <div className="row display-4 my-2">
-          <label className="col-md-6">Last Name</label>
+        {fnameErr && <div className="text-danger d-flex justify-content-end align-items-end">{fnameErr}</div>}
+        <div className="row fs-4 my-2 justify-content-end align-items-end">
           <input
             type="text"
             autoComplete="off"
             name="last_name"
-            placeholder="Doe"
+            placeholder="Last Name"
             value={lname}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
             className="col-md-6"
           />
         </div>
-        {lnameErr && <div className="text-danger">{lnameErr}</div>}
-        <div className="row display-4 my-2">
-          <label className="col-md-6">Email</label>
+        {lnameErr && <div className="text-danger d-flex justify-content-end align-items-end">{lnameErr}</div>}
+        <div className="row fs-4 my-2 justify-content-end align-items-end">
           <input
             type="email"
             autoComplete="off"
             name="user_email"
-            placeholder="example@mail.com"
+            placeholder="Email"
             value={mail}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
             className="col-md-6"
           />
         </div>
-        {mailErr && <div className="text-danger">{mailErr}</div>}
-        <div className="row display-4 my-2">
-          <label className="col-md-6">Phone Number</label>
+        {mailErr && <div className="text-danger d-flex justify-content-end align-items-end">{mailErr}</div>}
+        <div className="row fs-4 my-2 justify-content-end align-items-end">
           <input
             type="text"
             autoComplete="off"
             name="user_number"
-            placeholder="+00-1234567890"
+            placeholder="Phone Number"
             value={num}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
             className="col-md-6"
           />
         </div>
-        {numErr && <div className="text-danger">{numErr}</div>}
-        <div className="row display-4 mb-2">
-          <label className="col-md-12 text-center p-2">Message</label>
+        {numErr && <div className="text-danger d-flex justify-content-end align-items-end">{numErr}</div>}
+        <div className="row mb-2 justify-content-end align-items-end fs-4">
           <textarea
             name="message"
             value={msg}
             onChange={handleInputChange}
             onBlur={handleInputBlur}
-            className="col-md-12"
+            className="col-md-6"
             placeholder="Enter Your Message"
-            style={{zIndex:"1"}}
+            rows="4"
           />
         </div>
-        {msgErr && <div className="text-danger">{msgErr}</div>}
-        <div className="d-flex justify-content-center align-item-center pb-5 mx-5">
+        {msgErr && <div className="text-danger d-flex justify-content-end align-items-end">{msgErr}</div>}
+        <div className="d-flex justify-content-end align-item-end pt-5">
           <input
             type="submit"
             value="Send"
             style={{ fontWeight: "bold" }}
-            className="display-6 text-muted p-2"
+            className="display-6 text-muted p-2 "
             disabled={isDisabled}
           />
         </div>
