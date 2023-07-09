@@ -12,10 +12,11 @@ function Projects() {
     });
   }, []);
   return (
-    <div className="container vh-100 bg-dark mt-5">
-      <div className="row d-flex justify-content-between align-items-between">
+    <div className="container bg-dark mt-5 mb-5 pb-5">
+      <div className="row d-flex justify-content-evenly align-items-evenly">
         <div className="text-center text-warning display-4 p-5">Projects</div>
-        <div className="card col-md m-2" data-aos="fade-right">
+        {/* Calculator */}
+        <div className="card col-md-3 bg-secondary border border-5 border-dark rounded-3" data-aos="zoom-in">
           <img src={calculator} alt="Calculator" className="p-2" />
           <div className="card-body">
             <h5 className="card-title">Calculator</h5>
@@ -31,7 +32,7 @@ function Projects() {
           </div>
         </div>
         {/* Shopping Cart */}
-        <div className="card col-md m-2" data-aos="zoom-out">
+        <div className="card col-md-3 bg-secondary border border-5 border-dark rounded-3" data-aos="zoom-in">
           <img src={shopping} alt="Shopping Cart" className="m-2 border"/>
           <div className="card-body">
             <h5 className="card-title">Shopping Cart</h5>
@@ -47,7 +48,8 @@ function Projects() {
             </a>
           </div>
         </div>
-        <div className="card col-md m-2" data-aos="fade-left">
+        {/* Covid Report */}
+        <div className="card col-md-3 bg-secondary border border-5 border-dark rounded-3" data-aos="zoom-in">
           <img src={covid} alt="Covid" className="p-2"/>
           <div className="card-body">
             <h5 className="card-title">Covid Report</h5>

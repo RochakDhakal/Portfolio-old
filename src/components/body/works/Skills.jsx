@@ -24,14 +24,14 @@ function Skills() {
     });
   }, []);
   return (
-    <div data-aos="fade-up" className="mb-5 vh-100">
+    <div data-aos="fade-up" className="py-5 mt-5">
       <div
         className="p-5 display-4 text-center text-warning"
         data-aos="zoom-in"
       >
         Skills
       </div>
-      <div className="d-flex justify-content-center align-items-center skills text-light">
+      <div className="d-flex justify-content-evenly align-items-evenly skills text-light">
         <img src={html} alt="HTML 5" title="HTML 5" />
         <img src={css} alt="CSS 3" title="CSS 3"/>
         <img src={javascript} alt="JavaScript" title="JavaScript"/>
