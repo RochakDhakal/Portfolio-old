@@ -31,35 +31,35 @@ function Footer() {
       />
       <foreignObject x="0%" y="75%" width="100%" height="100%">
         <div className="d-flex justify-content-evenly align-items-center">
-          <a href="https://github.com/RochakDhakal/">
+          <a href="https://github.com/RochakDhakal/" target="_blank">
             <FontAwesomeIcon
               icon={faGithub}
               className="display-5 p-3 text-light"
               title="GitHub"
-              style={{fontSize:"5rem"}}
+              style={{ fontSize: "5rem" }}
             />
           </a>
-          <a href="https://www.linkedin.com/in/rochak-dhakal/">
+          <a href="https://www.linkedin.com/in/rochak-dhakal/" target="_blank">
             <FontAwesomeIcon
               icon={faLinkedinIn}
               className="p-3 text-light"
-              style={{fontSize:"5rem"}}
+              style={{ fontSize: "5rem" }}
               title="LinkedIn"
             />
           </a>
-          <a href="mailto:rochakdhakal@gmail.com">
+          <a href="mailto:rochakdhakal@gmail.com" target="_blank">
             <FontAwesomeIcon
               icon={faEnvelope}
               className="display-5 p-3 text-light"
-              style={{fontSize:"5rem"}}
+              style={{ fontSize: "5rem" }}
               title="Gmail"
             />
           </a>
-          <a href="https://www.instagram.com/rochakdhakal32/">
+          <a href="https://www.instagram.com/rochakdhakal32/" target="_blank">
             <FontAwesomeIcon
               icon={faInstagram}
               className="display-5 p-3 text-light"
-              style={{fontSize:"5rem"}}
+              style={{ fontSize: "5rem" }}
               title="Instagram"
             />
           </a>

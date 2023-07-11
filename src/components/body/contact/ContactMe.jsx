@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import contact from "../../../assets/Contact.jpg";
+import { useNavigate } from "react-router-dom";
 
 function ContactMe() {
   const [fname, setFname] = useState("");
@@ -15,10 +16,11 @@ function ContactMe() {
   const [msgErr, setMsgErr] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const form = useRef();
-
+  const navigate = useNavigate();
   const validateInputs = () => {
     let isValid = true;
 
+    // Error Messages
     if (fname.trim() === "") {
       setFnameErr("First name is required");
       isValid = false;
@@ -63,6 +65,7 @@ function ContactMe() {
     return isValid;
   };
 
+  // EmailJs
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -82,7 +85,8 @@ function ContactMe() {
         (result) => {
           console.log(result.text);
           setIsDisabled(true);
-          alert("Message Has Been Sent!");
+          alert("Your message has been sent, You will now be redirected to the Home page!");
+          navigate("/");
         },
         (error) => {
           console.log(error.text);

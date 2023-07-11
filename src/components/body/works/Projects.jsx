@@ -12,7 +12,7 @@ function Projects() {
     });
   }, []);
   return (
-    <div className="container bg-dark mt-5 mb-5 pb-5">
+    <div className="container bg-dark my-5 pb-5">
       <div className="row d-flex justify-content-evenly align-items-evenly">
         <div className="text-center text-warning display-4 p-5">Projects</div>
         {/* Calculator */}
@@ -25,6 +25,7 @@ function Projects() {
             </p>
             <a
               href="https://github.com/RochakDhakal/Web-Calculator"
+              target="_blank"
               className="btn btn-primary"
             >
               View Code
@@ -42,6 +43,7 @@ function Projects() {
             </p>
             <a
               href="https://github.com/RochakDhakal/ShoppingCart"
+              target="_blank"
               className="btn btn-primary"
             >
               View Code
@@ -54,10 +56,11 @@ function Projects() {
           <div className="card-body">
             <h5 className="card-title">Covid Report</h5>
             <p className="">
-              Created using React, React-Router, Axios and CSS frameworks.
+              Created using React, Axios and CSS frameworks.
             </p>
             <a
               href="https://github.com/RochakDhakal/Covid-19-Report"
+              target="_blank"
               className="btn btn-primary"
             >
               View Code

@@ -51,6 +51,7 @@ function Header() {
         <NavbarToggle
           aria-controls="responsive-navbar-nav"
           style={{ background: "white" }}
+          className="border-none"
           onClick={handleNavToggle}
         />
         <Navbar.Collapse
